@@ -27,6 +27,11 @@ jobs:
       - name: Install pip
         run: |
           python3 -m pip install --upgrade pip
+      - name: Install Clang
+        run: |
+          sudo apt-get install -y clang
+          sudo apt-get install -y clang-tools
+          sudo apt-get install -y llvm
       - name: Install CMake
         run: |
           python3 -m pip install cmake
